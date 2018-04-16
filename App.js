@@ -9,6 +9,7 @@ import {
   Platform,
   StyleSheet,
   Text,
+  Image,
   View
 } from 'react-native';
 
@@ -24,15 +25,24 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+        <Image
+          
+          style={{width: 200, height: 200, flex: 1}}
+          source={{uri: 'https://picsum.photos/200'}}
+        />
+        <View style={styles.detail}>
+          <Text style={styles.nama}>
+            Nama
+          </Text>
+          <Text style={styles.batch}>
+            Batch
+          </Text>
+        </View>
+          <View style={styles.footer}>
+          <Text>
+            refactory.id
+          </Text>
+        </View>
       </View>
     );
   }
@@ -43,16 +53,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    padding: 20
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  gambar: {
+    flex: 1,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  detail: {
+    flex: 1
   },
+  footer: {
+    flex: 0
+  }
 });
