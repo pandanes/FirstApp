@@ -62,7 +62,8 @@ export default class Login extends Component {
           onPress = {pic => this.handleLogin(pic)}
           buttonStyle = {valid ? {backgroundColor:'green'} : {backgroundColor:'grey'}}
           disabled = {!enabled}
-          text = 'LOGIN' buttonText = {styles.buttonText}
+          text = 'LOGIN'
+          buttonText = {styles.buttonText}
           />
         </View>
       </View>
